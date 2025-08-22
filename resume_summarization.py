@@ -63,7 +63,7 @@ if uploaded_file:
 
                 st.subheader("✨ AI Summary")
                 st.write(summary.strip())
-
+                
                 # Simple key insights extraction
                 st.subheader("🎯 Key Insights")
                 insights = []
@@ -71,11 +71,12 @@ if uploaded_file:
                     insights.append("✅ Candidate has technical background in **AI/ML**.")
                 if "Project" in resume_text or "Management" in resume_text:
                     insights.append("✅ Candidate has **Project Management** experience.")
-                if "Bachelor" in resume_text or "Master" in resume_text":
+                if "Bachelor" in resume_text or "Master" in resume_text:
                     insights.append("🎓 Candidate has higher education.")
-
+                
                 if insights:
                     for item in insights:
                         st.write(item)
                 else:
                     st.write("⚡ No major insights detected.")
+
